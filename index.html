@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Movie Recommendations</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #141414;
+            color: white;
+        }
+
+        header {
+            background: #1f1f1f;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #e50914;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #e50914;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #450a0a, #141414 75%);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #cccccc;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .hero a {
+            display: inline-block;
+            background: #e50914;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 40px 8%;
+        }
+
+        .container h2 {
+            margin-bottom: 25px;
+        }
+
+        .movies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 25px;
+        }
+
+        .movie-card {
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .poster {
+            height: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px;
+            background: linear-gradient(135deg, #7f1d1d, #1e1b4b);
+        }
+
+        .poster.blue {
+            background: linear-gradient(135deg, #075985, #172554);
+        }
+
+        .poster.gold {
+            background: linear-gradient(135deg, #92400e, #292524);
+        }
+
+        .poster.purple {
+            background: linear-gradient(135deg, #6b21a8, #1e1b4b);
+        }
+
+        .poster.green {
+            background: linear-gradient(135deg, #166534, #052e16);
+        }
+
+        .poster.pink {
+            background: linear-gradient(135deg, #9d174d, #312e81);
+        }
+
+        .movie-info {
+            padding: 18px;
+        }
+
+        .movie-info h3 {
+            margin-bottom: 8px;
+        }
+
+        .genre {
+            color: #bbbbbb;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #ffc107;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #dddddd;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .about {
+            background: #202020;
+            text-align: center;
+            padding: 40px 20px;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1f1f1f;
+            color: #aaaaaa;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                padding: 30px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MovieFlix</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Find Your Next Favorite Movie</h1>
+        <p>Discover amazing movies for every mood and moment.</p>
+        <a href="#movies">Explore Movies</a>
+    </section>
+
+    <section class="container" id="movies">
+        <h2>🎬 Recommended Movies</h2>
+
+        <div class="movies">
+
+            <div class="movie-card">
+                <div class="poster">Inception</div>
+                <div class="movie-info">
+                    <h3>Inception</h3>
+                    <p class="genre">Sci-Fi | Thriller</p>
+                    <p class="rating">★ 8.8/10</p>
+                    <p class="description">
+                        A skilled thief enters people's dreams
+                        to steal secrets and plant an idea.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster blue">Interstellar</div>
+                <div class="movie-info">
+                    <h3>Interstellar</h3>
+                    <p class="genre">Sci-Fi | Adventure</p>
+                    <p class="rating">★ 8.7/10</p>
+                    <p class="description">
+                        Explorers travel through space in search
+                        of a future for humanity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster gold">3 Idiots</div>
+                <div class="movie-info">
+                    <h3>3 Idiots</h3>
+                    <p class="genre">Comedy | Drama</p>
+                    <p class="rating">★ 8.4/10</p>
+                    <p class="description">
+                        Three engineering students discover
+                        friendship and the true meaning of success.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster purple">The Dark Knight</div>
+                <div class="movie-info">
+                    <h3>The Dark Knight</h3>
+                    <p class="genre">Action | Crime</p>
+                    <p class="rating">★ 9.0/10</p>
+                    <p class="description">
+                        Batman faces a dangerous criminal who
+                        challenges Gotham City's sense of order.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster green">Dangal</div>
+                <div class="movie-info">
+                    <h3>Dangal</h3>
+                    <p class="genre">Drama | Sports</p>
+                    <p class="rating">★ 8.3/10</p>
+                    <p class="description">
+                        A former wrestler trains his daughters
+                        to become successful wrestlers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster pink">Zindagi Na Milegi Dobara</div>
+                <div class="movie-info">
+                    <h3>Zindagi Na Milegi Dobara</h3>
+                    <p class="genre">Comedy | Drama</p>
+                    <p class="rating">★ 8.2/10</p>
+                    <p class="description">
+                        Three friends go on a road trip that
+                        changes their perspectives on life.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About MovieFlix</h2>
+        <p>
+            MovieFlix helps movie lovers discover entertaining
+            films across different genres.
+        </p>
+        <p>Find a movie, grab some popcorn, and enjoy!</p>
+    </section>
+
+    <footer>
+        <p>© 2026 MovieFlix | Movie Recommendation Website</p>
+    </footer>
+
+</body>
+</html>
